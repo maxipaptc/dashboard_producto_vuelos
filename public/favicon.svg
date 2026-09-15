@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Turismocity Favicon Filled -->
+  <circle cx="32" cy="32" r="30" fill="#3069F6" />
+  <!-- Paper airplane origami -->
+  <g transform="translate(14, 13) scale(1.15)">
+    <!-- Main top wing -->
+    <path d="M30 1 L2 14 L12 21 L30 1Z" fill="#FFFFFF" />
+    <!-- Under body fold / shadow -->
+    <path d="M30 1 L12 21 L15 28 L18 23 L30 1Z" fill="#DDE7FF" />
+    <!-- Right wing -->
+    <path d="M30 1 L18 23 L26 21 L30 1Z" fill="#EEF3FF" />
+    <!-- Small interior rudder -->
+    <path d="M15 28 L18 23 L14.5 22.5 Z" fill="#B3CCFF" />
+  </g>
+</svg>
