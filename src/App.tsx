@@ -127,6 +127,8 @@ export default function App() {
       queryUrl = params.get('url') || params.get('sheetUrl') || params.get('sheet');
     } catch {}
 
+    const envSheetUrl = (import.meta as any).env?.VITE_GOOGLE_SHEET_URL;
+
     const saved = localStorage.getItem('turismocity_connection_source_v2');
     let savedConn: ConnectionSource | null = null;
     if (saved) {
@@ -147,10 +149,20 @@ export default function App() {
       };
     }
 
-    if (savedConn) {
+    if (savedConn && savedConn.type === 'google-sheet-url' && savedConn.sheetUrl) {
       return {
         ...savedConn,
         sheetName: !savedConn.sheetName || savedConn.sheetName === 'Base' ? 'CTR Base' : savedConn.sheetName,
+        isAutoSyncing: true,
+      };
+    }
+
+    if (envSheetUrl && String(envSheetUrl).trim()) {
+      return {
+        type: 'google-sheet-url',
+        sheetUrl: String(envSheetUrl).trim(),
+        sheetName: 'CTR Base',
+        rowCount: SAMPLE_FLIGHT_DATA.length,
         isAutoSyncing: true,
       };
     }
