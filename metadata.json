@@ -1,0 +1,6 @@
+{
+  "name": "Turismocity Vuelos - Panel Corporativo",
+  "description": "Panel corporativo de filtros de vuelos en Turismocity: volumen de Search, Click_flight, CTR y Share por filtro de vuelos y device.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
